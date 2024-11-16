@@ -247,7 +247,7 @@ body {
 .delete-icon, .edit-icon {
   color: #d8cb92;
   cursor: pointer;
-  font-size: 2rem; /* Increased size for better visibility */
+  font-size: 3.5rem; /* Increased size for better visibility */
   transition: color 0.3s;
   display: inline-flex;
   align-items: center;
