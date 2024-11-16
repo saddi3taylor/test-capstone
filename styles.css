@@ -290,10 +290,10 @@ body {
 }
 
 /* Specific Media Query for Mobile Screens */
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 
   body {
-    background-color: pink !important;
+    background-color: pink;
   }
 
   #start-screen, #game-over-screen {
