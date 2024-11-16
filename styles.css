@@ -1,0 +1,384 @@
+/* Base Reset for Full Height */
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+  text-align: center;
+  background-color: #011F3F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.game-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#start-screen, #game-over-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.welcome {
+  font-family: 'Press Start 2P', cursive;
+  color: #d8cb92;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.game-title, .game-over-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(3rem, 7vw, 5rem);
+  color: #d8cb92;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#level-title {
+  margin-bottom: 40px;
+}
+
+.level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 5%;
+  color: #d8cb92;
+  white-space: nowrap;
+}
+
+#instructions {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  margin: 0 auto 30px;
+  color: #d8cb92;
+  max-width: 70%;
+}
+
+#start-bttn, #restart-bttn, #timeout-ok-btn, #save-score-btn, #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  margin-top: 15px;
+  color: #000;
+}
+
+#restart-bttn {
+  color: red;
+}
+
+#initials-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  color: #d8cb92;
+  margin-bottom: 10px;
+}
+
+#final-score {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem; /* Increased final score size */
+  color: #d8cb92;
+  margin-bottom: 15px;
+}
+
+#player-initials {
+  font-size: 2rem; /* Increased text field size */
+  margin: 20px auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.btn {
+  flex: 1 1 45%;
+  width: clamp(150px, 25vw, 250px); /* Increased button size */
+  height: clamp(150px, 25vw, 250px); /* Increased button size */
+  border: 8px solid black;
+  border-radius: 20%;
+  transition: all 0.2s ease;
+}
+
+.btn.green, .btn.yellow {
+  margin-bottom: 15px;
+}
+
+.red { background-color: red; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+
+.pressed {
+  box-shadow: 0 0 15px white;
+  background-color: grey;
+}
+
+.fixed-buttons-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 20;
+}
+
+#help-button, #game-history-button {
+  background-color: #d8cb92;
+  color: #011F3F;
+  border-radius: 50%;
+  width: 100px; /* Increased button size */
+  height: 100px; /* Increased button size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5rem; /* Increased button text size */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#help-button:hover, #game-history-button:hover {
+  background-color: #ffc107;
+}
+
+#help-popup, #history-popup, #session-timeout-popup, #delete-popup, #edit-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+#help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
+  background-color: #011F3F;
+  color: #d8cb92;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 70%;
+  text-align: center;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+
+.popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3.5rem; /* Increased popup titles */
+  color: #d8cb92;
+  margin-bottom: 20px;
+}
+
+#close-popup, #close-history {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #d8cb92;
+  color: #011F3F;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+#close-popup:hover, #close-history:hover {
+  background-color: #ffc107;
+}
+
+#help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
+  font-size: 2rem; /* Increased paragraph text inside popups */
+  line-height: 1.6;
+  color: #d8cb92;
+}
+
+#history-list {
+  text-align: left;
+  font-size: 1.8rem; /* Increased font size for history list */
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #d8cb92;
+}
+
+/* Edit and Delete Button - Mobile-Friendly Update */
+.delete-icon, .edit-icon {
+  color: #d8cb92;
+  cursor: pointer;
+  font-size: 2rem; /* Increased size for better visibility */
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon:hover {
+  color: #ff4444; /* Change color on hover to indicate delete action */
+}
+
+.edit-icon:hover {
+  color: #ffc107; /* Change color on hover to indicate edit action */
+}
+
+#delete-details {
+  color: red !important;
+  font-weight: bold;
+}
+
+#delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  margin-top: 15px;
+  margin-right: 10px; /* Adds space between buttons */
+  color: #000;
+}
+
+#delete-no-btn, #cancel-edit-btn {
+  margin-left: 10px; /* Adds space between buttons */
+}
+
+#min-score, #initials-filter, #edit-initials {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-size: 1.8rem; /* Increased input font size for popup forms */
+  margin-bottom: 10px;
+}
+
+/* Specific Media Query for Mobile Screens */
+@media (max-width: 600px) {
+
+  body {
+    background-color: pink;
+  }
+
+  #start-screen, #game-over-screen {
+       height: calc(100vh - env(safe-area-inset-bottom));
+  }
+
+  .welcome {
+    font-size: 3vh; /* Scaled up for better readability */
+  }
+
+  .game-title, .game-over-title {
+    font-size: clamp(5rem, 10vw, 8rem); /* Increased but manageable for mobile */
+  }
+
+  #instructions {
+    font-size: 4vh; /* Increased for better readability */
+    max-width: 90%;
+  }
+
+  #start-bttn, #restart-bttn, #timeout-ok-btn, #save-score-btn, #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
+    font-size: 3vh; /* Larger for better readability on mobile */
+    padding: 20px 40px; /* Increased button padding */
+  }
+
+  #initials-label {
+    font-size: 5vh; /* Increased for better readability */
+  }
+
+  #final-score {
+    font-size: 3vh; /* Larger for better readability */
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust to two columns layout */
+    gap: 25px; /* Increased gap for mobile */
+  }
+
+  .btn {
+    width: clamp(160px, 40vw, 240px); /* Increased for easier tapping */
+    height: clamp(160px, 40vw, 240px);
+  }
+
+  #help-button, #game-history-button {
+    width: 75px; /* Increased size for mobile */
+    height: 75px; /* Increased size for mobile */
+    font-size: 2.5vh; /* Adjusted size for readability */
+  }
+
+  .fixed-buttons-container {
+    top: 15px;
+    right: 15px;
+    gap: 25px; /* Adjusted space between help and history buttons */
+  }
+
+  #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
+    padding: 40px; /* More padding for larger content */
+    width: 95%; /* Wider for better mobile presentation */
+  }
+
+  .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
+    font-size: 3rem; /* Increased for mobile readability */
+  }
+
+  #close-popup, #close-history {
+    padding: 12px 20px; /* Larger close button for easier tapping */
+    font-size: 2rem; /* Increased for readability */
+  }
+
+  #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
+    font-size: 2.5vh; /* Increased for better readability */
+    max-width: 90%;
+  }
+
+  #history-list {
+    font-size: 2rem; /* Increased size for easier reading */
+  }
+
+  #min-score, #initials-filter, #edit-initials {
+    font-size: 2.5vh; /* Increased for better usability on mobile */
+    padding: 12px; /* More padding for input comfort */
+  }
+
+  .delete-icon, .edit-icon {
+    font-size: 30rem;
+  }
+
+}
