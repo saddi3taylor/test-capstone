@@ -293,7 +293,7 @@ body {
 @media (max-width: 600px) {
 
   body {
-    background-color: pink;
+    background-color: pink !important;
   }
 
   #start-screen, #game-over-screen {
