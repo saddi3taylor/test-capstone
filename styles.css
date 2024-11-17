@@ -51,26 +51,26 @@ body {
 .welcome {
   font-family: 'Press Start 2P', cursive;
   color: #d8cb92;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
 }
 
 .game-title, .game-over-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   color: #d8cb92;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
   line-height: 1.2;
 }
 
 #level-title {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   margin: 5%;
   color: #d8cb92;
   white-space: nowrap;
@@ -78,66 +78,83 @@ body {
 
 #instructions {
   font-family: 'Lato', sans-serif;
-  font-size: 1.2rem;
-  margin: 0 auto 20px;
+  font-size: 1.5rem;
+  margin: 0 auto 30px;
   color: #d8cb92;
   max-width: 80%;
 }
 
 #start-bttn, #restart-bttn, #timeout-ok-btn, #save-score-btn, #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  margin-top: 15px;
   color: #000;
+}
+
+#restart-bttn {
+  color: red;
+}
+
+#initials-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  color: #d8cb92;
+  margin-bottom: 10px;
+}
+
+#final-score {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  color: #d8cb92;
+  margin-bottom: 15px;
+}
+
+#player-initials {
+  font-size: 2rem;
+  margin: 20px auto;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
 .btn {
-  flex: 1 1 40%;
-  width: clamp(100px, 20vw, 200px);
-  height: clamp(100px, 20vw, 200px);
-  border: 6px solid black;
+  flex: 1 1 45%;
+  width: clamp(150px, 25vw, 250px);
+  height: clamp(150px, 25vw, 250px);
+  border: 8px solid black;
   border-radius: 20%;
   transition: all 0.2s ease;
 }
 
-.btn.green {
-  background-color: green;
-  padding-top: 15px;
+.btn.green, .btn.yellow {
+  margin-bottom: 15px;
 }
 
-.btn.red {
-  background-color: red;
-  padding-top: 15px;
-}
+.red { background-color: red; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
 
-.btn.blue {
-  background-color: blue;
-  padding-top: 15px;
-}
-
-.btn.yellow {
-  background-color: yellow;
-  padding-top: 15px;
+.pressed {
+  box-shadow: 0 0 15px white;
+  background-color: grey;
 }
 
 .fixed-buttons-container {
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   z-index: 20;
 }
 
@@ -145,15 +162,19 @@ body {
   background-color: #d8cb92;
   color: #011F3F;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+#help-button:hover, #game-history-button:hover {
+  background-color: #ffc107;
 }
 
 #help-popup, #history-popup, #session-timeout-popup, #delete-popup, #edit-popup {
@@ -211,6 +232,68 @@ body {
   color: #d8cb92;
 }
 
+#history-list {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #d8cb92;
+}
+
+/* Edit and Delete Button - Mobile-Friendly Update */
+.delete-icon, .edit-icon {
+  color: #d8cb92;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-icon:hover {
+  color: #ff4444;
+}
+
+.edit-icon:hover {
+  color: #ffc107;
+}
+
+#delete-details {
+  color: red !important;
+  font-weight: bold;
+}
+
+#delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  margin-top: 15px;
+  margin-right: 10px;
+  color: #000;
+}
+
+#delete-no-btn, #cancel-edit-btn {
+  margin-left: 10px;
+}
+
+#min-score, #initials-filter, #edit-initials {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
 /* Specific Media Query for Smaller Screens */
 @media (max-width: 600px) {
   #start-screen, #game-over-screen {
@@ -227,13 +310,13 @@ body {
   }
 
   #instructions {
-    font-size: 2vh;
+    font-size: 2.5vh;
     max-width: 90%;
   }
 
   #start-bttn, #restart-bttn, #timeout-ok-btn, #save-score-btn, #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
-    font-size: 2.5vh;
-    padding: 15px 30px;
+    font-size: 3vh;
+    padding: 20px 40px;
   }
 
   .container {
@@ -243,19 +326,47 @@ body {
   }
 
   .btn {
-    width: clamp(120px, 30vw, 200px);
-    height: clamp(120px, 30vw, 200px);
+    width: clamp(160px, 40vw, 240px);
+    height: clamp(160px, 40vw, 240px);
   }
 
   #help-button, #game-history-button {
-    width: 65px;
-    height: 65px;
-    font-size: 2vh;
+    width: 75px;
+    height: 75px;
+    font-size: 2.5vh;
   }
 
   .fixed-buttons-container {
-    top: 10px;
-    right: 10px;
-    gap: 20px;
+    top: 15px;
+    right: 15px;
+    gap: 25px;
+  }
+
+  #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
+    padding: 40px;
+    width: 95%;
+  }
+
+  .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
+    font-size: 3rem;
+  }
+
+  #close-popup, #close-history {
+    padding: 12px 20px;
+    font-size: 2rem;
+  }
+
+  #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
+    font-size: 2.5vh;
+    max-width: 90%;
+  }
+
+  #history-list {
+    font-size: 2rem;
+  }
+
+  #min-score, #initials-filter, #edit-initials {
+    font-size: 2.5vh;
+    padding: 12px;
   }
 }
