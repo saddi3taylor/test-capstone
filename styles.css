@@ -347,30 +347,28 @@ body {
   }
 
   #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
-    padding: 40px;
-    width: 95%;
+    padding: 20px; /* Reduce padding for smaller screens */
+    max-width: 80%; /* Reduce width for smaller screens */
+    max-height: 80%; /* Limit height */
+    overflow-y: auto; /* Allow scrolling if content is too long */
   }
 
   .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
-    font-size: 2rem; /* Further Reduced size */
+    font-size: 1.6rem; /* Further reduce title size for mobile */
   }
 
   #close-popup, #close-history {
-    padding: 12px 20px;
-    font-size: 2rem;
+    font-size: 1.5rem; /* Adjust button size */
+    padding: 8px 12px; /* Smaller padding for buttons */
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
-    font-size: 2.5vh;
-    max-width: 90%;
-  }
-
-  #history-list {
-    font-size: 2rem;
+    font-size: 1rem; /* Reduce text size */
+    max-width: 95%;
   }
 
   #min-score, #initials-filter, #edit-initials {
-    font-size: 2.5vh;
-    padding: 12px;
+    font-size: 1.2rem; /* Slightly smaller text input for better fit */
+    padding: 8px; /* Reduce padding for inputs */
   }
 }
