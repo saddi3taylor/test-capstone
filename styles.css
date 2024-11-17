@@ -362,8 +362,17 @@ body {
   }
 
   #close-popup, #close-history {
-    font-size: 1.5rem; /* Adjust button size */
-    padding: 8px 12px; /* Smaller padding for buttons */
+    font-size: 1rem; /* Adjust button size */
+    padding: 5px 10px; /* Smaller padding for buttons */
+    width: 30px; /* set width for smaller buttons */
+    height: 30px; /* set height for smaller buttons */
+  }
+
+  #close-popup:hover, #close-history:hover {
+    font-size: 1rem; 
+    padding: 5px 10px; 
+    width: 30px;
+    height: 30px;
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
