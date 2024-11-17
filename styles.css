@@ -65,8 +65,7 @@ body {
 }
 
 #level-title {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .level-title {
@@ -151,14 +150,8 @@ body {
 
 .fixed-buttons-container {
   position: fixed;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  justify-content: center;
-  width: 100%;
-}
+  top: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -169,15 +162,8 @@ body {
   background-color: #d8cb92;
   color: #011F3F;
   border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +203,7 @@ body {
 
 .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: #d8cb92;
   margin-bottom: 20px;
 }
@@ -258,7 +244,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 8px 0;
   border-bottom: 1px solid #d8cb92;
 }
 
@@ -266,7 +252,7 @@ body {
 .delete-icon, .edit-icon {
   color: #d8cb92;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: color 0.3s;
   display: inline-flex;
   align-items: center;
