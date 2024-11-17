@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
+  overflow: hidden; /* Prevent Body Scroll */
 }
 
 .game-content {
@@ -37,6 +38,7 @@ body {
   z-index: 10;
   padding: 20px;
   box-sizing: border-box;
+  overflow: hidden; /* Prevent Scroll on Start Screen */
 }
 
 #title-container {
@@ -64,7 +66,7 @@ body {
   line-height: 1.2;
 }
 
-#level-title {
+#level-title, #get-ready-title {
   margin-bottom: 40px;
 }
 
@@ -153,9 +155,14 @@ body {
   top: 20px;
   right: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row; /* Change to row */
+  justify-content: space-between; /* Ensure side-by-side */
+  gap: 10px;
   z-index: 20;
+}
+
+#how-to-play {
+  margin-right: 10px;
 }
 
 #help-button, #game-history-button {
@@ -203,7 +210,7 @@ body {
 
 .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3.5rem;
+  font-size: 2.5rem; /* Reduced size */
   color: #d8cb92;
   margin-bottom: 20px;
 }
@@ -227,14 +234,14 @@ body {
 }
 
 #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
-  font-size: 2rem;
+  font-size: 1.5rem; /* Reduced size */
   line-height: 1.6;
   color: #d8cb92;
 }
 
 #history-list {
   text-align: left;
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Reduced size */
   margin-top: 20px;
   padding: 0;
   list-style: none;
@@ -252,7 +259,7 @@ body {
 .delete-icon, .edit-icon {
   color: #d8cb92;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.8rem; /* Reduced size */
   transition: color 0.3s;
   display: inline-flex;
   align-items: center;
@@ -274,7 +281,7 @@ body {
 
 #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduced size */
   padding: 15px 30px;
   margin-top: 15px;
   margin-right: 10px;
@@ -290,7 +297,7 @@ body {
   color: #000;
   border: none;
   padding: 12px;
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Reduced size */
   margin-bottom: 10px;
 }
 
@@ -339,7 +346,7 @@ body {
   .fixed-buttons-container {
     top: 15px;
     right: 15px;
-    gap: 25px;
+    gap: 10px; /* Updated for side-by-side */
   }
 
   #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
@@ -348,7 +355,7 @@ body {
   }
 
   .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Reduced size */
   }
 
   #close-popup, #close-history {
