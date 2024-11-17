@@ -220,10 +220,10 @@ body {
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 8px 12px; /* Smaller padding for buttons */
+  padding: 5px 8px; /* Further smaller padding for mobile */
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.3rem; /* Reduced size for better fit */
+  font-size: 1rem; /* Further reduced size for better fit on mobile */
   border-radius: 5px;
 }
 
