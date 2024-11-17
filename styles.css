@@ -351,7 +351,7 @@ body {
   }
 
   #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
-    /*padding: 20px;  Reduce padding for smaller screens */
+    padding: 20px; /* Reduce padding for smaller screens */
     max-width: 80%; /* Reduce width for smaller screens */
     max-height: 80%; /* Limit height */
     overflow-y: auto; /* Allow scrolling if content is too long */
