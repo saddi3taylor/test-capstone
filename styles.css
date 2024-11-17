@@ -156,6 +156,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  justify-content: center;
+  width: 100%;
+}
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -214,7 +217,7 @@ body {
 
 .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #d8cb92;
   margin-bottom: 20px;
 }
