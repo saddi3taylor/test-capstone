@@ -57,7 +57,7 @@ body {
   margin-bottom: 20px;
 }
 
-.game-title, .game-over-title {
+.game-title, .game-over-title, .level-title, #get-ready-title {
   font-family: 'Press Start 2P', cursive;
   font-size: clamp(3rem, 7vw, 5rem);
   color: #d8cb92;
@@ -66,16 +66,8 @@ body {
   line-height: 1.2;
 }
 
-#level-title, #get-ready-title {
+#level-title {
   margin-bottom: 40px;
-}
-
-.level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  margin: 5%;
-  color: #d8cb92;
-  white-space: nowrap;
 }
 
 #instructions {
@@ -316,8 +308,9 @@ body {
     font-size: 2.5vh;
   }
 
-  .game-title, .game-over-title {
-    font-size: clamp(3rem, 8vw, 5rem);
+  .game-title, .game-over-title, .level-title, #get-ready-title {
+    font-size: clamp(2rem, 6vw, 4rem); /* Further reduced size for Get Ready */
+    margin-bottom: 20px;
   }
 
   #instructions {
