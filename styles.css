@@ -216,14 +216,14 @@ body {
 #close-popup, #close-history {
   position: absolute;
   top: 5px;
-  right: 15px;
+  right: 10px;
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 5px 8px; /* Smaller padding for mobile */
+  padding: 3px 6px; /* Smaller padding to make both the button and 'X' smaller for mobile */
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem; /* Reduced size for better fit on mobile */
+  font-size: 0.8rem; /* Further reduced size for better fit on mobile */
   border-radius: 5px;
   display: flex;
   align-items: center;
