@@ -402,7 +402,7 @@ div#help-popup-content {
     max-width: 95%;
   }
 
- #save-edit-btn, #cancel-edit-btn, #delete-no-btn, #delete-yes-btn {
+ #save-edit-btn, #cancel-edit-btn, #delete-no-btn, #delete-yes-btn, #timeout-ok-btn {
     font-size: 2vh;
     padding: 10px 30px;
   }
