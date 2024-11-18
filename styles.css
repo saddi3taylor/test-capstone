@@ -159,6 +159,10 @@ body {
   margin-right: 10px;
 }
 
+span.score-details{
+  font-size: 1.5rem;
+}
+
 #help-button, #game-history-button {
   background-color: #d8cb92;
   color: #011F3F;
@@ -189,6 +193,10 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 50;
+}
+
+div#help-popup-content {
+  max-width: 20%;
 }
 
 #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
