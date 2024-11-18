@@ -3,7 +3,6 @@ body, html {
   height: 100%;
   margin: 0;
   overflow-x: hidden; /* Prevent horizontal scroll */
-  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 body {
@@ -34,7 +33,6 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
-  overflow-y: auto; /* Allow scrolling on these screens */
 }
 
 #title-container {
@@ -185,7 +183,6 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 50;
-  overflow-y: auto; /* Allow scrolling inside popups */
 }
 
 #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
@@ -301,7 +298,6 @@ body {
 
   #start-screen, #game-over-screen {
        height: calc(100vh - env(safe-area-inset-bottom));
-       overflow-y: auto; /* Allow scrolling on these screens on mobile */
   }
 
   .welcome {
@@ -384,4 +380,5 @@ body {
   .delete-icon, .edit-icon {
     font-size: 30rem;
   }
+
 }
