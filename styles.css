@@ -353,6 +353,14 @@ div#help-popup-content {
     height: 75px;
     font-size: 2.5vh;
   }
+
+  div#help-popup-content {
+  max-width: 80%;
+}
+
+  span.score-details{
+  font-size: 0.9rem;
+}
   
   #help-popup-content {
     padding: 40px;
@@ -392,6 +400,11 @@ div#help-popup-content {
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
     font-size: 1rem; /* Reduce text size */
     max-width: 95%;
+  }
+
+ #save-edit-btn, #cancel-edit-btn, #delete-no-btn, #delete-yes-btn {
+    font-size: 2vh;
+    padding: 10px 30px;
   }
 
   #min-score, #initials-filter, #edit-initials {
