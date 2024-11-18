@@ -2,7 +2,8 @@
 body, html {
   height: 100%;
   margin: 0;
-  overflow: hidden; /* Prevent any scroll */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 body {
@@ -19,8 +20,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 90vw;
-  padding: 10px;
 }
 
 #start-screen, #game-over-screen {
@@ -35,8 +34,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
-  padding: 20px;
-  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling on these screens */
 }
 
 #title-container {
@@ -45,7 +43,6 @@ body {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  margin-bottom: 10px;
 }
 
 .welcome {
@@ -55,7 +52,7 @@ body {
   margin-bottom: 20px;
 }
 
-.game-title, .game-over-title, .level-title, #get-ready-title {
+.game-title, .game-over-title {
   font-family: 'Press Start 2P', cursive;
   font-size: clamp(3rem, 7vw, 5rem);
   color: #d8cb92;
@@ -68,12 +65,20 @@ body {
   margin-bottom: 40px;
 }
 
+.level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  margin: 5%;
+  color: #d8cb92;
+  white-space: nowrap;
+}
+
 #instructions {
   font-family: 'Lato', sans-serif;
   font-size: 1.5rem;
   margin: 0 auto 30px;
   color: #d8cb92;
-  max-width: 80%;
+  max-width: 70%;
 }
 
 #start-bttn, #restart-bttn, #timeout-ok-btn, #save-score-btn, #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
@@ -90,23 +95,21 @@ body {
 
 #initials-label {
   font-family: 'Lato', sans-serif;
-  font-size: 1.5rem; /* Medium size for mobile */
+  font-size: 1.5rem;
   color: #d8cb92;
   margin-bottom: 10px;
 }
 
 #final-score {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.5rem; /* Medium size for mobile */
+  font-size: 3rem; /* Increased final score size */
   color: #d8cb92;
   margin-bottom: 15px;
 }
 
 #player-initials {
-  font-size: 1.5rem; /* Reduced font size for better fit on mobile */
+  font-size: 2rem; /* Increased text field size */
   margin: 20px auto;
-  max-width: 80%; /* Prevent going off the page */
-  padding: 10px;
 }
 
 .container {
@@ -121,8 +124,8 @@ body {
 
 .btn {
   flex: 1 1 45%;
-  width: clamp(150px, 25vw, 250px);
-  height: clamp(150px, 25vw, 250px);
+  width: clamp(150px, 25vw, 250px); /* Increased button size */
+  height: clamp(150px, 25vw, 250px); /* Increased button size */
   border: 8px solid black;
   border-radius: 20%;
   transition: all 0.2s ease;
@@ -147,31 +150,22 @@ body {
   top: 20px;
   right: 20px;
   display: flex;
-  flex-direction: row; /* Change to row */
-  justify-content: space-between; /* Ensure side-by-side */
-  gap: 10px;
+  flex-direction: column;
+  gap: 20px;
   z-index: 20;
-}
-
-#how-to-play {
-  margin-right: 10px;
-}
-
-span.score-details{
-  font-size: 1.5rem;
 }
 
 #help-button, #game-history-button {
   background-color: #d8cb92;
   color: #011F3F;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 100px; /* Increased button size */
+  height: 100px; /* Increased button size */
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 4.5rem;
+  font-size: 2.5rem; /* Increased button text size */
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -191,10 +185,7 @@ span.score-details{
   align-items: center;
   justify-content: center;
   z-index: 50;
-}
-
-div#help-popup-content {
-  max-width: 20%;
+  overflow-y: auto; /* Allow scrolling inside popups */
 }
 
 #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
@@ -210,28 +201,23 @@ div#help-popup-content {
 
 .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem; /* Further Reduced size */
+  font-size: 3.5rem; /* Increased popup titles */
   color: #d8cb92;
   margin-bottom: 20px;
-  position: sticky; /* Keep Title and Close Button Fixed */
-  top: 0;
-  background-color: #011F3F;
 }
 
 #close-popup, #close-history {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 4px 6px; /* Reduced padding for better fit */
+  padding: 10px 15px;
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.8rem; /* Reduced size for smaller display */
+  font-size: 1.5rem;
   border-radius: 5px;
-  width: 24px;
-  height: 24px;
 }
 
 #close-popup:hover, #close-history:hover {
@@ -239,14 +225,14 @@ div#help-popup-content {
 }
 
 #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
-  font-size: 1.2rem; /* Further Reduced size */
+  font-size: 2rem; /* Increased paragraph text inside popups */
   line-height: 1.6;
   color: #d8cb92;
 }
 
 #history-list {
   text-align: left;
-  font-size: 1.2rem; /* Further Reduced size */
+  font-size: 1.8rem; /* Increased font size for history list */
   margin-top: 20px;
   padding: 0;
   list-style: none;
@@ -258,27 +244,25 @@ div#help-popup-content {
   align-items: center;
   padding: 8px 0;
   border-bottom: 1px solid #d8cb92;
-  font-size: 0.9rem; /* Further reduced size for mobile to fit on one line */
 }
 
 /* Edit and Delete Button - Mobile-Friendly Update */
 .delete-icon, .edit-icon {
   color: #d8cb92;
   cursor: pointer;
-  font-size: 1.2rem; /* Further Reduced size */
+  font-size: 2rem; /* Increased size for better visibility */
   transition: color 0.3s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px; /* Add space for better accessibility */
 }
 
 .delete-icon:hover {
-  color: #ff4444;
+  color: #ff4444; /* Change color on hover to indicate delete action */
 }
 
 .edit-icon:hover {
-  color: #ffc107;
+  color: #ffc107; /* Change color on hover to indicate edit action */
 }
 
 #delete-details {
@@ -288,15 +272,15 @@ div#help-popup-content {
 
 #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.2rem; /* Further Reduced size */
+  font-size: 1.5rem;
   padding: 15px 30px;
   margin-top: 15px;
-  margin-right: 10px;
+  margin-right: 10px; /* Adds space between buttons */
   color: #000;
 }
 
 #delete-no-btn, #cancel-edit-btn {
-  margin-left: 10px;
+  margin-left: 10px; /* Adds space between buttons */
 }
 
 #min-score, #initials-filter, #edit-initials {
@@ -304,108 +288,100 @@ div#help-popup-content {
   color: #000;
   border: none;
   padding: 12px;
-  font-size: 1.2rem; /* Further Reduced size */
+  font-size: 1.8rem; /* Increased input font size for popup forms */
   margin-bottom: 10px;
 }
 
-/* Specific Media Query for Smaller Screens */
-@media (max-width: 932px) {
+/* Specific Media Query for Mobile Screens */
+@media (max-width: 600px) {
+
+  body {
+    background-color: pink;
+  }
+
   #start-screen, #game-over-screen {
-    height: calc(100vh - env(safe-area-inset-bottom));
-    padding: 15px;
+       height: calc(100vh - env(safe-area-inset-bottom));
+       overflow-y: auto; /* Allow scrolling on these screens on mobile */
   }
 
   .welcome {
-    font-size: 2.5vh;
+    font-size: 3vh; /* Scaled up for better readability */
   }
 
-  .game-title, .game-over-title, .level-title, #get-ready-title {
-    font-size: clamp(2rem, 6vw, 4rem); /* Further reduced size for Get Ready */
-    margin-bottom: 20px;
+  .game-title, .game-over-title {
+    font-size: clamp(5rem, 10vw, 8rem); /* Increased but manageable for mobile */
   }
 
   #instructions {
-    font-size: 2.5vh;
+    font-size: 4vh; /* Increased for better readability */
     max-width: 90%;
   }
 
   #start-bttn, #restart-bttn, #timeout-ok-btn, #save-score-btn, #delete-yes-btn, #delete-no-btn, #save-edit-btn, #cancel-edit-btn {
-    font-size: 3vh;
-    padding: 20px 40px;
+    font-size: 3vh; /* Larger for better readability on mobile */
+    padding: 20px 40px; /* Increased button padding */
+  }
+
+  #initials-label {
+    font-size: 5vh; /* Increased for better readability */
+  }
+
+  #final-score {
+    font-size: 3vh; /* Larger for better readability */
   }
 
   .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Adjust to two columns layout */
+    gap: 25px; /* Increased gap for mobile */
   }
 
   .btn {
-    width: clamp(160px, 40vw, 240px);
+    width: clamp(160px, 40vw, 240px); /* Increased for easier tapping */
     height: clamp(160px, 40vw, 240px);
   }
 
   #help-button, #game-history-button {
-    width: 55px;
-    height: 55px;
-    font-size: 3vh;
-  }
-
-  div#help-popup-content {
-  max-width: 80%;
-}
-
-  span.score-details{
-  font-size: 0.9rem;
-}
-  
-  #help-popup-content {
-    padding: 40px;
+    width: 75px; /* Increased size for mobile */
+    height: 75px; /* Increased size for mobile */
+    font-size: 2.5vh; /* Adjusted size for readability */
   }
 
   .fixed-buttons-container {
     top: 15px;
     right: 15px;
-    gap: 10px; /* Updated for side-by-side */
+    gap: 25px; /* Adjusted space between help and history buttons */
   }
 
   #help-popup-content, #history-popup-content, #timeout-popup-content, #delete-popup-content, #edit-popup-content {
-    padding: 20px; /* Reduce padding for smaller screens */
-    max-width: 80%; /* Reduce width for smaller screens */
-    max-height: 80%; /* Limit height */
-    overflow-y: auto; /* Allow scrolling if content is too long */
+    padding: 40px; /* More padding for larger content */
+    width: 95%; /* Wider for better mobile presentation */
   }
 
   .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
-    font-size: 1.6rem; /* Further reduce title size for mobile */
+    font-size: 3rem; /* Increased for mobile readability */
   }
 
   #close-popup, #close-history {
-    font-size: 0.8rem; /* Adjust button size */
-    padding: 4px 6px; /* Smaller padding for buttons */
-    width: 24px; /* Reduced width for smaller buttons */
-    height: 24px; /* Reduced height for smaller buttons */
-  }
-
-  #close-popup:hover, #close-history:hover {
-    font-size: 0.8rem;
-    padding: 4px 6px;
-    width: 24px;
-    height: 24px;
+    padding: 12px 20px; /* Larger close button for easier tapping */
+    font-size: 2rem; /* Increased for readability */
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
-    font-size: 1rem; /* Reduce text size */
-    max-width: 95%;
+    font-size: 2.5vh; /* Increased for better readability */
+    max-width: 90%;
   }
 
- #save-edit-btn, #cancel-edit-btn, #delete-no-btn, #delete-yes-btn, #timeout-ok-btn {
-    font-size: 2vh;
-    padding: 10px 30px;
+  #history-list {
+    font-size: 2rem; /* Increased size for easier reading */
   }
 
   #min-score, #initials-filter, #edit-initials {
-    font-size: 1.2rem; /* Slightly smaller text input for better fit */
-    padding: 8px; /* Reduce padding for inputs */
+    font-size: 2.5vh; /* Increased for better usability on mobile */
+    padding: 12px; /* More padding for input comfort */
+  }
+
+  .delete-icon, .edit-icon {
+    font-size: 30rem;
   }
 }
