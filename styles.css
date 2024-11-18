@@ -201,7 +201,6 @@ body {
   position: relative;
   font-family: 'Lato', sans-serif;
   overflow-y: auto;  /* Make Content Scrollable */
-  margin-top: 20px; /* Add space between the popup content and the close button */
 }
 
 .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
@@ -221,14 +220,13 @@ body {
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 5px 8px; /* Smaller padding for mobile */
+  padding: 4px 6px; /* Reduced padding for better fit */
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem; /* Reduced size for better fit on mobile */
+  font-size: 0.8rem; /* Reduced size for smaller display */
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center the 'X' within the button */
+  width: 24px;
+  height: 24px;
 }
 
 #close-popup:hover, #close-history:hover {
@@ -366,8 +364,17 @@ body {
   }
 
   #close-popup, #close-history {
-    font-size: 1.5rem; /* Adjust button size */
-    padding: 8px 12px; /* Smaller padding for buttons */
+    font-size: 0.8rem; /* Adjust button size */
+    padding: 4px 6px; /* Smaller padding for buttons */
+    width: 24px; /* Reduced width for smaller buttons */
+    height: 24px; /* Reduced height for smaller buttons */
+  }
+
+  #close-popup:hover, #close-history:hover {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    width: 24px;
+    height: 24px;
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
