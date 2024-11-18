@@ -155,6 +155,10 @@ body {
   z-index: 20;
 }
 
+#how-to-play {
+  margin-right: 10px;
+}
+
 #help-button, #game-history-button {
   background-color: #d8cb92;
   color: #011F3F;
@@ -216,11 +220,13 @@ body {
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 5px 8px; /* Further smaller padding for mobile */
+  padding: 4px 6px; /* Reduced padding for better fit */
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem; /* Further reduced size for better fit on mobile */
+  font-size: 0.8rem; /* Reduced size for smaller display */
   border-radius: 5px;
+  width: 24px;
+  height: 24px;
 }
 
 #close-popup:hover, #close-history:hover {
@@ -312,14 +318,6 @@ body {
     font-size: clamp(2rem, 6vw, 4rem); /* Further reduced size for Get Ready */
     margin-bottom: 20px;
   }
-  
-  #help-popup-content {
-    padding: 40px;
-  }
-
-  .help-text {
-    margin-top: 0;
-  }
 
   #instructions {
     font-size: 2.5vh;
@@ -347,6 +345,14 @@ body {
     height: 75px;
     font-size: 2.5vh;
   }
+  
+  #help-popup-content {
+    padding: 40px;
+  }
+
+  .help-text {
+    margin-top: 0;
+  }
 
   .fixed-buttons-container {
     top: 15px;
@@ -366,17 +372,17 @@ body {
   }
 
   #close-popup, #close-history {
-    font-size: 1rem; /* Adjust button size */
-    padding: 5px 10px; /* Smaller padding for buttons */
-    width: 30px; /* set width for smaller buttons */
-    height: 30px; /* set height for smaller buttons */
+    font-size: 0.8rem; /* Adjust button size */
+    padding: 4px 6px; /* Smaller padding for buttons */
+    width: 24px; /* Reduced width for smaller buttons */
+    height: 24px; /* Reduced height for smaller buttons */
   }
 
   #close-popup:hover, #close-history:hover {
-    font-size: 1rem;
-    padding: 5px 10px;
-    width: 30px;
-    height: 30px;
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    width: 24px;
+    height: 24px;
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
