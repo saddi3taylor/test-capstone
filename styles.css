@@ -155,10 +155,6 @@ body {
   z-index: 20;
 }
 
-#how-to-play {
-  margin-right: 10px;
-}
-
 #help-button, #game-history-button {
   background-color: #d8cb92;
   color: #011F3F;
@@ -220,10 +216,10 @@ body {
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 5px 8px;
+  padding: 5px 8px; /* Further smaller padding for mobile */
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
+  font-size: 1rem; /* Further reduced size for better fit on mobile */
   border-radius: 5px;
 }
 
@@ -317,6 +313,10 @@ body {
     margin-bottom: 20px;
   }
 
+  #help-popup-content {
+    padding: 40px;
+  }
+
   #instructions {
     font-size: 2.5vh;
     max-width: 90%;
@@ -359,16 +359,20 @@ body {
 
   .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
     font-size: 1.6rem; /* Further reduce title size for mobile */
-    margin-bottom: 40px; /* Added spacing for more separation from close button */
   }
 
   #close-popup, #close-history {
     font-size: 1rem; /* Adjust button size */
-    padding: 5px 8px; /* Smaller padding for buttons */
+    padding: 5px 10px; /* Smaller padding for buttons */
+    width: 30px; /* set width for smaller buttons */
+    height: 30px; /* set height for smaller buttons */
   }
 
   #close-popup:hover, #close-history:hover {
-    background-color: #ffc107;
+    font-size: 1rem;
+    padding: 5px 10px;
+    width: 30px;
+    height: 30px;
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
