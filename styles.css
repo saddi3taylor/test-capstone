@@ -220,11 +220,14 @@ body {
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 5px 8px; /* Further smaller padding for mobile */
+  padding: 5px 8px; /* Smaller padding for mobile */
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1rem; /* Further reduced size for better fit on mobile */
+  font-size: 1rem; /* Reduced size for better fit on mobile */
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the 'X' within the button */
 }
 
 #close-popup:hover, #close-history:hover {
@@ -362,17 +365,8 @@ body {
   }
 
   #close-popup, #close-history {
-    font-size: 1rem; /* Adjust button size */
-    padding: 5px 10px; /* Smaller padding for buttons */
-    width: 30px; /* set width for smaller buttons */
-    height: 30px; /* set height for smaller buttons */
-  }
-
-  #close-popup:hover, #close-history:hover {
-    font-size: 1rem; 
-    padding: 5px 10px; 
-    width: 30px;
-    height: 30px;
+    font-size: 1.5rem; /* Adjust button size */
+    padding: 8px 12px; /* Smaller padding for buttons */
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
