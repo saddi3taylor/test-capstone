@@ -220,13 +220,11 @@ body {
   background: #d8cb92;
   color: #011F3F;
   border: none;
-  padding: 4px 6px; /* Reduced padding for better fit */
+  padding: 5px 8px;
   cursor: pointer;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.8rem; /* Reduced size for smaller display */
+  font-size: 1rem;
   border-radius: 5px;
-  width: 24px;
-  height: 24px;
 }
 
 #close-popup:hover, #close-history:hover {
@@ -361,20 +359,16 @@ body {
 
   .popup-title, .popup-title-history, .popup-title-session, .popup-title-delete, .popup-title-edit {
     font-size: 1.6rem; /* Further reduce title size for mobile */
+    margin-bottom: 40px; /* Added spacing for more separation from close button */
   }
 
   #close-popup, #close-history {
-    font-size: 0.8rem; /* Adjust button size */
-    padding: 4px 6px; /* Smaller padding for buttons */
-    width: 24px; /* Reduced width for smaller buttons */
-    height: 24px; /* Reduced height for smaller buttons */
+    font-size: 1rem; /* Adjust button size */
+    padding: 5px 8px; /* Smaller padding for buttons */
   }
 
   #close-popup:hover, #close-history:hover {
-    font-size: 0.8rem;
-    padding: 4px 6px;
-    width: 24px;
-    height: 24px;
+    background-color: #ffc107;
   }
 
   #help-popup-content p, #history-popup-content p, #timeout-popup-content p, #delete-popup-content p, #edit-popup-content p {
