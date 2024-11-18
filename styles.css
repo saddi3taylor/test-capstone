@@ -312,9 +312,13 @@ body {
     font-size: clamp(2rem, 6vw, 4rem); /* Further reduced size for Get Ready */
     margin-bottom: 20px;
   }
-
+  
   #help-popup-content {
     padding: 40px;
+  }
+
+  .help-text {
+    margin-top: 0;
   }
 
   #instructions {
