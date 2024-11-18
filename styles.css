@@ -312,7 +312,7 @@ div#help-popup-content {
 }
 
 /* Specific Media Query for Smaller Screens */
-@media (max-width: 600px) {
+@media (max-width: 932px) {
   #start-screen, #game-over-screen {
     height: calc(100vh - env(safe-area-inset-bottom));
     padding: 15px;
