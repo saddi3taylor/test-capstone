@@ -349,9 +349,9 @@ div#help-popup-content {
   }
 
   #help-button, #game-history-button {
-    width: 35px;
-    height: 35px;
-    font-size: 1.5vh;
+    width: 55px;
+    height: 55px;
+    font-size: 3vh;
   }
 
   div#help-popup-content {
