@@ -30,7 +30,7 @@ body {
   justify-content: center;
   height: 100%;
   text-align: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -312,16 +312,16 @@ div#help-popup-content {
 /* Specific Media Query for Smaller Screens */
 @media (max-width: 932px) {
   #start-screen, #game-over-screen {
-    height: calc(100vh - env(safe-area-inset-bottom));
-    padding: 15px;
-  }
+       height: calc(100vh - env(safe-area-inset-bottom));
+       padding: 15px;
+     }
 
   .welcome {
     font-size: 2.5vh;
   }
 
   .game-title {
-    font-size: 20vw; /* Further reduced size for Get Ready */
+    font-size: 10vw; /* Further reduced size for Get Ready */
     margin-bottom: 20px;
   }
 
