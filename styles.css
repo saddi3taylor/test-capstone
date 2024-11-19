@@ -322,9 +322,10 @@ div#help-popup-content {
 
   .game-title {
     font-size: 20vw; /* Further reduced size for Get Ready */
+    margin-bottom: 20px;
   }
 
-  .game-title, .game-over-title, .level-title, #get-ready-title {
+  .game-over-title, .level-title, #get-ready-title {
     font-size: clamp(2rem, 6vw, 4rem); /* Further reduced size for Get Ready */
     margin-bottom: 20px;
   }
