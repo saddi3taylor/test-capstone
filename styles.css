@@ -319,9 +319,9 @@ div#help-popup-content {
   .welcome {
     font-size: 2.5vh;
   }
-  
+
   .game-title {
-    font-size: clamp(2rem, 20vw, 4rem); /* Further reduced size for Get Ready */
+    font-size: 20vw; /* Further reduced size for Get Ready */
   }
 
   .game-title, .game-over-title, .level-title, #get-ready-title {
