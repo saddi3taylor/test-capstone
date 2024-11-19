@@ -166,13 +166,13 @@ span.score-details{
   background-color: #d8cb92;
   color: #011F3F;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
